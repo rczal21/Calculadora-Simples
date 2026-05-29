@@ -1,0 +1,42 @@
+//Calculadora simples
+//Contas de adição, subtração, multiplicação e divisão
+//Apenas para números inteiros
+
+#include <stdio.h>
+
+
+int main() 
+{
+    int num1, num2;
+    char operador;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num1);
+    printf("Digite outro numero inteiro: ");
+    scanf("%d", &num2);
+    printf("Digite o operador (+, -, *, /): ");
+    scanf(" %c", &operador);
+
+    switch (operador) {
+        case '+':
+            printf("Resultado: %d\n", num1 + num2);
+            break;
+        case '-':
+            printf("Resultado: %d\n", num1 - num2);
+            break;
+        case '*':
+            printf("Resultado: %d\n", num1 * num2);
+            break;
+        case '/':
+            if (num2 != 0) {
+                printf("Resultado: %d\n", num1 / num2);
+            } else {
+                printf("Divisao por zero não existe!\n");
+            }
+            break;
+        default:
+            printf("Operador invalido.\n");
+    }
+
+    return 0;
+}
