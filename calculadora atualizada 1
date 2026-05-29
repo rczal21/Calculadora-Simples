@@ -1,0 +1,24 @@
+# Calculadora simples
+# Contas de adição, subtração, multiplicação e divisão
+# Apenas para números inteiros
+
+# Pedindo os dados um por um (igual ao seu novo código em C)
+num1 = int(input("Digite um numero inteiro: "))
+num2 = int(input("Digite outro numero inteiro: "))
+operador = input("Digite o operador (+, -, *, /): ")
+
+# Estrutura de decisão
+if operador == '+':
+    print(f"Resultado: {num1 + num2}")
+elif operador == '-':
+    print(f"Resultado: {num1 - num2}")
+elif operador == '*':
+    print(f"Resultado: {num1 * num2}")
+elif operador == '/':
+    if num2 != 0:
+        # Mantendo a divisão inteira (//) para ser fiel ao código em C
+        print(f"Resultado: {num1 // num2}")
+    else:
+        print("Divisao por zero não existe!")
+else:
+    print("Operador invalido.")
